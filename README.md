@@ -9,8 +9,8 @@ The system schedules tasks into fixed time slots while satisfying:
 - Conflict constraints (graph-based task conflicts)
 - Resource constraints (CPU, RAM, GPU, Network)
 - SLA time windows
-- Load balancing across slots
-- Optimization of weighted penalty function
+- Load-aware scheduling via penalty-based optimization
+- Optimization of a weighted penalty function
 
 It uses a **custom heuristic scheduling algorithm (PRCDSATScheduler)** inspired by DSATUR + greedy local search optimization.
 
@@ -18,18 +18,16 @@ It uses a **custom heuristic scheduling algorithm (PRCDSATScheduler)** inspired 
 
 ## ✨ Features
 
-- 📊 Conflict-aware task scheduling using graph constraints
-- ⚙️ Multi-dimensional resource allocation (CPU, RAM, GPU, Network)
-- ⏱ SLA window enforcement for each task
-- 🧠 Heuristic-based scheduling algorithm (priority + degree + weight)
-- 🔁 Local search optimization (swap-based improvement)
-- 📉 Custom penalty function:
-  - Delay cost minimization
-  - Load balancing across slots
-  - SLA risk reduction
-  - GPU utilization optimization
-- 📦 JSON-based input/output support
-- 🧪 Extensible architecture for benchmarking and testing
+📊 Conflict-aware task scheduling using graph constraints  
+⚙️ Multi-dimensional resource allocation (CPU, RAM, GPU, Network)  
+⏱ SLA window enforcement for each task  
+🧠 Heuristic-based scheduling algorithm (degree, weight, SLA window priority)  
+🔁 Local search optimization (swap-based improvement)  
+📉 Custom penalty function:
+- Delay cost minimization  
+- Load balancing across slots  
+- SLA risk reduction  
+- GPU utilization efficiency 
 
 ---
 
